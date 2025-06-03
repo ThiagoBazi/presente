@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to right, #ffccd5, #ffe5ec);
-      color: #333;
-    }
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    background: linear-gradient(to right, #4b6b3c, #a8c97f, #d6c88f);
+    color: #333;
+}
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -21,7 +21,7 @@
     h1 {
       font-family: 'Great Vibes', cursive;
       font-size: 3rem;
-      color: #d6336c;
+      color: #086972;
       margin-bottom: 0.5rem;
     }
     .message {
@@ -33,39 +33,29 @@
       width: 100%;
       max-width: 500px;
       margin: 2rem auto;
-      overflow: hidden;
+      overflow-x: scroll;
+      display: flex;
+      scroll-snap-type: x mandatory;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      -webkit-overflow-scrolling: touch;
     }
     .slides {
       display: flex;
-      transition: transform 0.5s ease-in-out;
     }
     .slides img {
       width: 100%;
       height: auto;
       object-fit: cover;
-    }
-    .controls {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    .controls button {
-      background-color: #d6336c;
-      color: white;
-      border: none;
-      padding: 0.5rem 1rem;
-      margin: 0 0.25rem;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 1rem;
+      scroll-snap-align: start;
+      flex-shrink: 0;
     }
     .timeline {
       margin-top: 2rem;
       text-align: left;
     }
     .timeline h2 {
-      color: #c1126b;
+      color: #086972;
     }
     .timeline ul {
       list-style: none;
@@ -85,16 +75,16 @@
     <p class="message">Neste Dia dos Namorados, eu quis te dar algo diferente. Algo que fosse só nosso, que contasse nossa história, e que te lembrasse o quanto eu te amo, todos os dias.</p>
 
     <div class="carousel">
-      <div class="slides" id="slides">
-        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.52_01aad3dd.jpg" alt="Foto 1">
+      <div class="slides">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_1e43eefe.jpg" alt="Foto 1">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_adb59d58.jpg" alt="Foto 2">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_b3ee5f4e.jpg" alt="Foto 3">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_f0a0bdec.jpg" alt="Foto 4">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.52_01aad3dd.jpg" alt="Foto 5">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_67355fe9.jpg" alt="Foto 6">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_6a59d54d.jpg" alt="Foto 7">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_aa1b8c34.jpg" alt="Foto 8">
       </div>
-    </div>
-    <div class="controls">
-      <button onclick="prevSlide()">◀</button>
-      <button onclick="nextSlide()">▶</button>
     </div>
 
     <div class="timeline">
@@ -112,26 +102,5 @@
       Seu navegador não suporta áudio.
     </audio>
   </div>
-
-  <script>
-    const slides = document.getElementById('slides');
-    const totalSlides = slides.children.length;
-    let currentIndex = 0;
-
-    function updateSlide() {
-      const offset = -currentIndex * 100;
-      slides.style.transform = `translateX(${offset}%)`;
-    }
-
-    function nextSlide() {
-      currentIndex = (currentIndex + 1) % totalSlides;
-      updateSlide();
-    }
-
-    function prevSlide() {
-      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-      updateSlide();
-    }
-  </script>
 </body>
 </html>
