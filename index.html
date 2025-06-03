@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para o Amor da Minha Vida</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #ffccd5, #ffe5ec);
+      color: #333;
+    }
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #d6336c;
+      margin-bottom: 0.5rem;
+    }
+    .message {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    .carousel {
+      position: relative;
+      width: 100%;
+      max-width: 500px;
+      margin: 2rem auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+    .slides {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+    .slides img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+    }
+    .controls {
+      text-align: center;
+      margin-top: 1rem;
+    }
+    .controls button {
+      background-color: #d6336c;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      margin: 0 0.25rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .timeline {
+      margin-top: 2rem;
+      text-align: left;
+    }
+    .timeline h2 {
+      color: #c1126b;
+    }
+    .timeline ul {
+      list-style: none;
+      padding: 0;
+    }
+    .timeline li {
+      margin-bottom: 1rem;
+    }
+    audio {
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para o Amor da Minha Vida 💖</h1>
+    <p class="message">Neste Dia dos Namorados, eu quis te dar algo diferente. Algo que fosse só nosso, que contasse nossa história, e que te lembrasse o quanto eu te amo, todos os dias.</p>
+
+    <div class="carousel">
+      <div class="slides" id="slides">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.52_01aad3dd.jpg" alt="Foto 1">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_adb59d58.jpg" alt="Foto 2">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_b3ee5f4e.jpg" alt="Foto 3">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_f0a0bdec.jpg" alt="Foto 4">
+      </div>
+    </div>
+    <div class="controls">
+      <button onclick="prevSlide()">◀</button>
+      <button onclick="nextSlide()">▶</button>
+    </div>
+
+    <div class="timeline">
+      <h2>Nossa Jornada</h2>
+      <ul>
+        <li><strong>🌟 Primeiro encontro:</strong> Foi ali que tudo começou...</li>
+        <li><strong>💍 Pedido especial:</strong> O dia que te pedi algo para sempre.</li>
+        <li><strong>✈️ Viagem inesquecível:</strong> A aventura que vivemos juntos.</li>
+        <li><strong>🎉 Momentos únicos:</strong> Cada risada, cada abraço, cada olhar.</li>
+      </ul>
+    </div>
+
+    <audio controls>
+      <source src="musica.mp3" type="audio/mp3">
+      Seu navegador não suporta áudio.
+    </audio>
+  </div>
+
+  <script>
+    const slides = document.getElementById('slides');
+    const totalSlides = slides.children.length;
+    let currentIndex = 0;
+
+    function updateSlide() {
+      const offset = -currentIndex * 100;
+      slides.style.transform = `translateX(${offset}%)`;
+    }
+
+    function nextSlide() {
+      currentIndex = (currentIndex + 1) % totalSlides;
+      updateSlide();
+    }
+
+    function prevSlide() {
+      currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+      updateSlide();
+    }
+  </script>
+</body>
+</html>
