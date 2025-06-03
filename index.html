@@ -1,17 +1,18 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Para o Amor da Minha Vida</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
-    background: linear-gradient(to right, #4b6b3c, #a8c97f, #d6c88f);
-    color: #333;
-}
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #4b6b3c, #a8c97f, #d6c88f);
+      color: #333;
+    }
     .container {
       max-width: 800px;
       margin: 0 auto;
@@ -23,6 +24,12 @@
       font-size: 3rem;
       color: #086972;
       margin-bottom: 0.5rem;
+    }
+    #timer {
+      font-size: 1.3rem;
+      color: #fff;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
     }
     .message {
       font-size: 1.2rem;
@@ -67,11 +74,24 @@
     audio {
       margin-top: 2rem;
     }
+    #timer {
+  font-size: 1.3rem;
+  color: #fff;
+  background: rgba(8, 105, 114, 0.6);
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
+
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Para o Amor da Minha Vida 💖</h1>
+
     <p class="message">Neste Dia dos Namorados, eu quis te dar algo diferente. Algo que fosse só nosso, que contasse nossa história, e que te lembrasse o quanto eu te amo, todos os dias.</p>
 
     <div class="carousel">
@@ -90,17 +110,36 @@
     <div class="timeline">
       <h2>Nossa Jornada</h2>
       <ul>
-        <li><strong>🌟 Primeiro encontro:</strong> Foi ali que tudo começou...</li>
+        <li><strong>🌟 Primeiro encontro:</strong> Nosso primeiro encontro foi onde tudo começou. Naquele dia, eu percebi que tinha encontrado a mulher dos meus sonhos, a mulher que eu sempre pedi a Deus, e desde então, só quero estar contigo todos os dias da minha vida.</li>
         <li><strong>💍 Pedido especial:</strong> O dia que te pedi algo para sempre.</li>
         <li><strong>✈️ Viagem inesquecível:</strong> A aventura que vivemos juntos.</li>
         <li><strong>🎉 Momentos únicos:</strong> Cada risada, cada abraço, cada olhar.</li>
       </ul>
     </div>
-
+<div id="timer"></div>
     <audio controls>
       <source src="musica.mp3" type="audio/mp3">
       Seu navegador não suporta áudio.
     </audio>
   </div>
+
+  <script>
+    function atualizarCronometro() {
+      const inicio = new Date("2024-06-08T00:00:00");
+      const agora = new Date();
+      const diff = agora - inicio;
+
+      const dias = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const minutos = Math.floor((diff / (1000 * 60)) % 60);
+      const segundos = Math.floor((diff / 1000) % 60);
+
+      document.getElementById('timer').innerHTML = 
+        ` Estamos juntos há <strong>${dias}</strong> dias, <strong>${horas}</strong> horas, <strong>${minutos}</strong> minutos e <strong>${segundos}</strong> segundos ❤️`;
+    }
+
+    setInterval(atualizarCronometro, 1000);
+    atualizarCronometro();
+  </script>
 </body>
 </html>

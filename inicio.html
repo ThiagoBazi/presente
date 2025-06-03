@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mensagem Especial</title>
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(135deg, #f06292, #ba68c8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      text-align: center;
+    }
+    button {
+      background-color: #fff;
+      color: #d81b60;
+      font-size: 2rem;
+      padding: 1rem 3rem;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      box-shadow: 0 6px 15px rgba(216,27,96,0.5);
+      transition: background-color 0.3s, color 0.3s;
+    }
+    button:hover {
+      background-color: #d81b60;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <button id="amorBtn">Eu te amo ❤️</button>
+
+  <script>
+    document.getElementById('amorBtn').addEventListener('click', () => {
+      // Redireciona para a página principal (sua página com o cronômetro)
+      window.location.href = 'index.html'; // ajuste o nome do arquivo se necessário
+    });
+  </script>
+</body>
+</html>
