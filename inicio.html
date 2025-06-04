@@ -202,7 +202,7 @@
     if(localStorage.getItem('musicaLiberada') === 'true') {
       audio.volume = 0.05;
       audio.play().catch(() => {
-        // Se o navegador bloquear autoplay, o som não irá tocar
+        // Autoplay bloqueado pelo navegador, não tem o que fazer
       });
     }
   </script>
