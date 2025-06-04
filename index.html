@@ -3,47 +3,50 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Mensagem Especial</title>
+  <title>Para Você ❤️</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
   <style>
-    body, html {
-      height: 100%;
+    html {
       margin: 0;
+      height: 100%;
       font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(135deg, #f06292, #ba68c8);
+      background: linear-gradient(to right, #fceabb, #00a149);
       display: flex;
       justify-content: center;
       align-items: center;
-      color: white;
-      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+      overflow: hidden;
     }
     button {
-      background-color: #fff;
-      color: #d81b60;
+      background-color: #ffffff;
+      color: #00a149;
       font-size: 2rem;
       padding: 1rem 3rem;
       border: none;
-      border-radius: 12px;
+      border-radius: 16px;
       cursor: pointer;
-      box-shadow: 0 6px 15px rgba(216,27,96,0.5);
-      transition: background-color 0.3s, color 0.3s;
+      box-shadow: 0 6px 15px rgba(0,161,73,0.4);
+      transition: all 0.3s ease;
     }
     button:hover {
-      background-color: #d81b60;
+      background-color: #00a149;
       color: white;
+      transform: scale(1.05);
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
 <body>
-  <button id="amorBtn">Eu te amo ❤️</button>
+  <button onclick="abrirMensagem()">Eu te amo ❤️</button>
 
   <script>
-    document.getElementById('amorBtn').addEventListener('click', () => {
-      // Marca que o usuário autorizou a música
+    function abrirMensagem() {
       localStorage.setItem('musicaLiberada', 'true');
-
-      // Redireciona para a página principal
-      window.location.href = 'inicio.html'; // ajuste o nome do arquivo principal se necessário
-    });
+      window.location.href = 'inicio.html';
+    }
   </script>
 </body>
 </html>
