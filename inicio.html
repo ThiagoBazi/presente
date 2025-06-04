@@ -39,7 +39,6 @@
       margin: 2rem auto;
       max-width: 600px;
     }
-  
     .message {
       font-size: 1.3rem;
       margin: 1rem 0 2rem;
@@ -88,7 +87,6 @@
       margin-bottom: 1.5rem;
       line-height: 1.6;
     }
-    
   </style>
 </head>
 <body>
@@ -96,8 +94,6 @@
     <h1>Para o Amor da Minha Vida 💖</h1>
 
     <div id="timer"></div>
-
-  
 
     <p class="message">Neste Dia dos Namorados, eu quis te dar algo diferente. Algo que fosse só nosso, que contasse nossa história, e que te lembrasse o quanto eu te amo, todos os dias.</p>
 
@@ -121,11 +117,11 @@
       </div>
     </div>
 
-<div class="timeline">
-  <ul>
-    <li><strong>✈️ Primeira viagem juntos:</strong> Nossa primeira viagem foi onde percebi que, ao seu lado, tudo ganha um sentido diferente. Cada lugar que visitamos ficou mais bonito, cada momento mais leve, e cada sorriso mais verdadeiro. Naquele instante, tive certeza de que quero viver todas as aventuras da vida contigo, porque é ao seu lado que eu me sinto em casa, não importa onde estejamos. 💖</li>
-  </ul>
-</div>
+    <div class="timeline">
+      <ul>
+        <li><strong>✈️ Primeira viagem juntos:</strong> Nossa primeira viagem foi onde percebi que, ao seu lado, tudo ganha um sentido diferente. Cada lugar que visitamos ficou mais bonito, cada momento mais leve, e cada sorriso mais verdadeiro. Naquele instante, tive certeza de que quero viver todas as aventuras da vida contigo, porque é ao seu lado que eu me sinto em casa, não importa onde estejamos. 💖</li>
+      </ul>
+    </div>
 
     <div class="carousel">
       <div class="slides">
@@ -139,26 +135,29 @@
         <img src="img/ferias8.jpg" alt="Foto 13">
         <img src="img/ferias9.jpg" alt="Foto 14">
         <img src="img/ferias10.jpg" alt="Foto 15">
-        
       </div>
     </div>
-<div class="timeline">
+
+    <div class="timeline">
       <ul>
         <li><strong>💍 Pedido especial:</strong> E nessa viagem eu decidi, de verdade, que seria você. Que era ao seu lado que eu queria viver todos os meus dias, dividir meu coração, meus sentimentos, meus sonhos e até meus medos. Foi ali, entre risadas, conversas sinceras e momentos simples que se tornaram inesquecíveis, que eu tive a certeza de que você era a mulher da minha vida.</li>
+      </ul>
+    </div>
 
-     <div class="carousel">
+    <div class="carousel">
       <div class="slides">
-        <img src="img/pedido.jpg" alt= "Foto 4">
+        <img src="img/pedido.jpg" alt="Foto 4">
         <img src="img/pedido2.jpg" alt="Foto 5">
       </div>
     </div>
+
     <div class="timeline">
       <ul>
         <li><strong>🎉 Momentos únicos:</strong> Cada risada, cada abraço, cada olhar. Tudo o que vivemos juntos é o que me faz te amar ainda mais a cada dia.</li>
       </ul>
     </div>
 
-     <div class="carousel">
+    <div class="carousel">
       <div class="slides">
         <img src="img/momentos.jpg" alt="Foto 16">
         <img src="img/momentos2.jpg" alt="Foto 17">
@@ -169,18 +168,39 @@
         <img src="img/momentos7.jpg" alt="Foto 22">
         <img src="img/momentos8.jpg" alt="Foto 23">
         <img src="img/momentos9.jpg" alt="Foto 24">
-        <img src="img/momentos10.jpg" alt="Foto 25">
-        
+        <img src="img/momentos10.jpg" alt="Foto 5">
       </div>
     </div>
 
-    <audio controls>
-      <source src="musica.mp3" type="audio/mp3">
-      Seu navegador não suporta áudio.
-    </audio>
+    <h2 style="color: #a51c30; font-family: 'Great Vibes', cursive;">Nossa Trilha Sonora 🎶</h2>
+    <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7eYEQnY6Lzh3Y8jSOt3xEF?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <audio id="musica" src="musica.mp3" autoplay muted loop></audio>
   </div>
 
   <script>
+    const audio = document.getElementById("musica");
+    audio.volume = 0.05; // volume discreto
+
+    window.addEventListener("load", () => {
+      const playPromise = audio.play();
+
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            audio.muted = false;
+            audio.volume = 0.05;
+          })
+          .catch(() => {
+            document.body.addEventListener("click", () => {
+              audio.play();
+              audio.muted = false;
+              audio.volume = 0.05;
+            }, { once: true });
+          });
+      }
+    });
+
     function atualizarCronometro() {
       const inicio = new Date("2024-06-08T00:00:00");
       const agora = new Date();
