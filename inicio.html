@@ -9,41 +9,47 @@
     body {
       margin: 0;
       font-family: 'Open Sans', sans-serif;
-      background: linear-gradient(to right, #4b6b3c, #a8c97f, #d6c88f);
+      background: linear-gradient(to right, #fceabb, #00a149);
       color: #333;
     }
     .container {
-      max-width: 800px;
+      max-width: 850px;
       margin: 0 auto;
       padding: 2rem;
       text-align: center;
     }
     h1 {
       font-family: 'Great Vibes', cursive;
-      font-size: 3rem;
-      color: #086972;
+      font-size: 4rem;
+      color: #a51c30;
       margin-bottom: 0.5rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
     }
     #timer {
-      font-size: 1.3rem;
+      font-size: 1.5rem;
       color: #fff;
-      margin-top: 0.5rem;
-      margin-bottom: 1rem;
+      background: rgba(165, 28, 48, 0.8);
+      padding: 1rem 1.5rem;
+      border-radius: 20px;
+      display: inline-block;
+      margin: 1rem 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
     .message {
-      font-size: 1.2rem;
-      margin: 1rem 0;
+      font-size: 1.3rem;
+      margin: 1rem 0 2rem;
+      color: #5c2b29;
     }
     .carousel {
       position: relative;
       width: 100%;
-      max-width: 500px;
+      max-width: 600px;
       margin: 2rem auto;
       overflow-x: scroll;
       display: flex;
       scroll-snap-type: x mandatory;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
       -webkit-overflow-scrolling: touch;
     }
     .slides {
@@ -55,51 +61,72 @@
       object-fit: cover;
       scroll-snap-align: start;
       flex-shrink: 0;
+      border-radius: 16px;
     }
     .timeline {
-      margin-top: 2rem;
-      text-align: left;
+      margin-top: 3rem;
+      text-align: center;
     }
     .timeline h2 {
-      color: #086972;
+      color: #a51c30;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
     }
     .timeline ul {
       list-style: none;
       padding: 0;
+      margin: 0;
+      font-size: 1.2rem;
+      color: #5c2b29;
     }
     .timeline li {
-      margin-bottom: 1rem;
+      margin-bottom: 1.5rem;
+      line-height: 1.6;
     }
     audio {
       margin-top: 2rem;
     }
-    #timer {
-  font-size: 1.3rem;
-  color: #fff;
-  background: rgba(8, 105, 114, 0.6);
-  padding: 0.8rem 1rem;
-  border-radius: 12px;
-  display: inline-block;
-  margin-top: 0.5rem;
-  margin-bottom: 1rem;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-}
-
   </style>
 </head>
 <body>
   <div class="container">
     <h1>Para o Amor da Minha Vida 💖</h1>
 
+    <div id="timer"></div>
+
     <p class="message">Neste Dia dos Namorados, eu quis te dar algo diferente. Algo que fosse só nosso, que contasse nossa história, e que te lembrasse o quanto eu te amo, todos os dias.</p>
 
     <div class="carousel">
       <div class="slides">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_1e43eefe.jpg" alt="Foto 1">
-        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_adb59d58.jpg" alt="Foto 2">
-        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_b3ee5f4e.jpg" alt="Foto 3">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <h2>Nossa Jornada</h2>
+      <ul>
+        <li><strong>🌟 Primeiro encontro:</strong> Nosso primeiro encontro foi onde tudo começou. Naquele dia, eu percebi que tinha encontrado a mulher dos meus sonhos, a mulher que eu sempre pedi a Deus. Desde então, só quero estar contigo todos os dias da minha vida.</li>
+      </ul>
+    </div>
+
+    <div class="carousel">
+      <div class="slides">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_f0a0bdec.jpg" alt="Foto 4">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.52_01aad3dd.jpg" alt="Foto 5">
+      </div>
+    </div>
+
+    <div class="timeline">
+      <ul>
+        <li><strong>💍 Pedido especial:</strong> O dia que te pedi algo para sempre.</li>
+        <li><strong>✈️ Viagem inesquecível:</strong> A aventura que vivemos juntos.</li>
+      </ul>
+    </div>
+
+    <div class="carousel">
+      <div class="slides">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_adb59d58.jpg" alt="Foto 2">
+        <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 13.44.53_b3ee5f4e.jpg" alt="Foto 3">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_67355fe9.jpg" alt="Foto 6">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_6a59d54d.jpg" alt="Foto 7">
         <img src="img/Imagem do WhatsApp de 2025-06-03 à(s) 16.31.27_aa1b8c34.jpg" alt="Foto 8">
@@ -107,15 +134,11 @@
     </div>
 
     <div class="timeline">
-      <h2>Nossa Jornada</h2>
       <ul>
-        <li><strong>🌟 Primeiro encontro:</strong> Nosso primeiro encontro foi onde tudo começou. Naquele dia, eu percebi que tinha encontrado a mulher dos meus sonhos, a mulher que eu sempre pedi a Deus, e desde então, só quero estar contigo todos os dias da minha vida.</li>
-        <li><strong>💍 Pedido especial:</strong> O dia que te pedi algo para sempre.</li>
-        <li><strong>✈️ Viagem inesquecível:</strong> A aventura que vivemos juntos.</li>
-        <li><strong>🎉 Momentos únicos:</strong> Cada risada, cada abraço, cada olhar.</li>
+        <li><strong>🎉 Momentos únicos:</strong> Cada risada, cada abraço, cada olhar. Tudo o que vivemos juntos é o que me faz te amar ainda mais a cada dia.</li>
       </ul>
     </div>
-<div id="timer"></div>
+
     <audio controls>
       <source src="musica.mp3" type="audio/mp3">
       Seu navegador não suporta áudio.
@@ -134,7 +157,7 @@
       const segundos = Math.floor((diff / 1000) % 60);
 
       document.getElementById('timer').innerHTML = 
-        ` Estamos juntos há <strong>${dias}</strong> dias, <strong>${horas}</strong> horas, <strong>${minutos}</strong> minutos e <strong>${segundos}</strong> segundos ❤️`;
+        `Estamos juntos há <strong>${dias}</strong> dias, <strong>${horas}</strong> horas, <strong>${minutos}</strong> minutos e <strong>${segundos}</strong> segundos ❤️`;
     }
 
     setInterval(atualizarCronometro, 1000);
