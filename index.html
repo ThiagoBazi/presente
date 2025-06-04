@@ -39,8 +39,11 @@
 
   <script>
     document.getElementById('amorBtn').addEventListener('click', () => {
-      // Redireciona para a página principal (sua página com o cronômetro)
-      window.location.href = 'inicio.html'; // ajuste o nome do arquivo se necessário
+      // Marca que o usuário autorizou a música
+      localStorage.setItem('musicaLiberada', 'true');
+      
+      // Redireciona para a página principal
+      window.location.href = 'inicio.html'; // ajuste para o nome do arquivo principal
     });
   </script>
 </body>
