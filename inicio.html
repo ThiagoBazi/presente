@@ -188,8 +188,17 @@
       document.getElementById('timer').innerHTML = 
         `Estamos juntos há <strong>${dias}</strong> dias, <strong>${horas}</strong> horas, <strong>${minutos}</strong> minutos e <strong>${segundos}</strong> segundos ❤️`;
     }
+
     setInterval(atualizarCronometro, 1000);
     atualizarCronometro();
+
+    // Faz todos os carrosseis começarem do início ao carregar a página
+    window.addEventListener('load', () => {
+      const carrosseis = document.querySelectorAll('.carousel');
+      carrosseis.forEach(carrossel => {
+        carrossel.scrollLeft = 0;
+      });
+    });
   </script>
 </body>
 </html>
