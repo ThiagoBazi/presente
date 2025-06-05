@@ -88,6 +88,23 @@
       margin-top: 2rem;
       box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     }
+    .quiz-button {
+      display: inline-block;
+      background: #a51c30;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 600;
+      padding: 1rem 2rem;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+      margin-top: 3rem;
+    }
+    .quiz-button:hover {
+      background: #7f1222;
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
@@ -96,14 +113,12 @@
     <div id="timer"></div>
     <p class="message">Neste Dia dos Namorados, eu quis te dar algo diferente. Algo que fosse só nosso, que contasse nossa história, e que te lembrasse o quanto eu te amo, todos os dias.</p>
 
-    <!-- Primeira imagem -->
     <div class="carousel">
       <div class="slides">
         <img src="img/principal.jpg" alt="Foto principal">
       </div>
     </div>
 
-    <!-- Seções da linha do tempo com fotos -->
     <div class="timeline">
       <h2>Nossa Jornada</h2>
       <ul>
@@ -134,6 +149,11 @@
         <img src="img/ferias8.jpg" alt="Férias 8">
         <img src="img/ferias9.jpg" alt="Férias 9">
         <img src="img/ferias10.jpg" alt="Férias 10">
+        <img src="img/ferias11.jpg" alt="Férias 11">
+        <img src="img/ferias12.jpg" alt="Férias 12">
+        <img src="img/ferias13.jpg" alt="Férias 13">
+        <img src="img/ferias14.jpg" alt="Férias 13">
+
       </div>
     </div>
 
@@ -166,12 +186,19 @@
         <img src="img/momentos8.jpg" alt="Momentos 8">
         <img src="img/momentos9.jpg" alt="Momentos 9">
         <img src="img/momentos10.jpg" alt="Momentos 10">
+        <img src="img/momentos11.jpg" alt="Momentos 11">
+
       </div>
     </div>
 
     <!-- Trilha sonora -->
     <h2 style="color: #a51c30; font-family: 'Great Vibes', cursive;">Nossa Trilha Sonora 🎶</h2>
     <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/7eYEQnY6Lzh3Y8jSOt3xEF?utm_source=generator" width="100%" height="352" frameborder="0" allowfullscreen allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+
+    <!-- Botão do quiz -->
+    <div>
+      <a href="quiz.html" class="quiz-button">💌 Clique aqui para uma surpresa especial</a>
+    </div>
   </div>
 
   <script>
@@ -192,7 +219,6 @@
     setInterval(atualizarCronometro, 1000);
     atualizarCronometro();
 
-    // Faz todos os carrosseis começarem do início ao carregar a página
     window.addEventListener('load', () => {
       const carrosseis = document.querySelectorAll('.carousel');
       carrosseis.forEach(carrossel => {
