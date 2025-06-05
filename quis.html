@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Quiz do Amor 💘</title>
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: linear-gradient(to right, #fceabb, #00a149);
+      color: #333;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Great Vibes', cursive;
+      font-size: 3rem;
+      color: #a51c30;
+      margin-bottom: 2rem;
+    }
+    .quiz-container {
+      max-width: 700px;
+      margin: 0 auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
+    }
+    .question {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .question h3 {
+      margin-bottom: 0.5rem;
+    }
+    .question label {
+      display: block;
+      margin-bottom: 0.3rem;
+    }
+    button {
+      margin-top: 1.5rem;
+      background: #a51c30;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 2rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    #resultado {
+      margin-top: 1.5rem;
+      font-weight: bold;
+      color: #a51c30;
+    }
+  </style>
+</head>
+<body>
+  <h1>Quiz do Amor 💘</h1>
+  <div class="quiz-container">
+    <form id="quizForm">
+      <div class="question">
+        <h3>1. Qual o meu esporte favorito?</h3>
+        <label><input type="radio" name="q1" value="a" /> Handebol</label>
+        <label><input type="radio" name="q1" value="b" /> Basquete</label>
+        <label><input type="radio" name="q1" value="c" /> Futebol</label>
+        <label><input type="radio" name="q1" value="d" /> Vôlei</label>
+      </div>
+
+      <div class="question">
+        <h3>2. O que aconteceu no nosso primeiro encontro?</h3>
+        <label><input type="radio" name="q2" value="a" /> Quebrou um copo</label>
+        <label><input type="radio" name="q2" value="b" /> Esquecemos a carteira</label>
+        <label><input type="radio" name="q2" value="c" /> Você se engasgou com um pedaço de carne e ficou parecendo um tomate de tão vermelha</label>
+        <label><input type="radio" name="q2" value="d" /> Esqueceu meu nome</label>
+      </div>
+
+      <div class="question">
+        <h3>3. Qual foi o apelido carinhoso que eu te dei?</h3>
+        <label><input type="radio" name="q3" value="a" /> Mo</label>
+        <label><input type="radio" name="q3" value="b" /> Momo</label>
+        <label><input type="radio" name="q3" value="c" /> Fofão</label>
+        <label><input type="radio" name="q3" value="d" /> Mozão</label>
+      </div>
+
+      <div class="question">
+        <h3>4. Que dia tudo começou?</h3>
+        <label><input type="radio" name="q4" value="a" /> 30/05/2025</label>
+        <label><input type="radio" name="q4" value="b" /> 31/05/2024</label>
+        <label><input type="radio" name="q4" value="c" /> 30/05/2024</label>
+        <label><input type="radio" name="q4" value="d" /> 29/05/2024</label>
+      </div>
+
+      <div class="question">
+        <h3>5. Qual foi o primeiro torneio que você foi me ver?</h3>
+        <label><input type="radio" name="q5" value="a" /> No SESC</label>
+        <label><input type="radio" name="q5" value="b" /> No SESI</label>
+        <label><input type="radio" name="q5" value="c" /> No Riograndense</label>
+        <label><input type="radio" name="q5" value="d" /> Na escola</label>
+      </div>
+
+      <button type="button" onclick="verificarRespostas()">Finalizar Quiz</button>
+      <div id="resultado"></div>
+    </form>
+  </div>
+
+  <script>
+    function verificarRespostas() {
+      const respostasCorretas = {
+        q1: 'd', // Vôlei
+        q2: 'c', // Engasgou com carne
+        q3: 'c', // Fofão
+        q4: 'c', // 30/05/2024
+        q5: 'a'  // No SESC
+      };
+
+      let acertos = 0;
+
+      for (let q in respostasCorretas) {
+        const respostaSelecionada = document.querySelector(`input[name="${q}"]:checked`);
+        if (respostaSelecionada && respostaSelecionada.value === respostasCorretas[q]) {
+          acertos++;
+        }
+      }
+
+      const resultado = document.getElementById('resultado');
+
+      if (acertos === 5) {
+        resultado.innerHTML = 'Parabéns, meu amor! ❤️';
+        window.location.href = 'pagina-premio.html';
+      } else {
+        resultado.innerHTML = 'Hmm... você errou alguma! Tenta de novo 🥺';
+      }
+    }
+  </script>
+</body>
+</html>
